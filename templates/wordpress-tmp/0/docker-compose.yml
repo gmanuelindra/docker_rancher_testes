@@ -10,14 +10,14 @@ wordpressa:
   links:
     - dba:mysql
   ports:
-    - 80:80
+    - 81:80
 
 wordpressb:
   image: wordpress
   links:
     - dbb:mysql
   ports:
-    - 80:80
+    - 82:80
 
 db:
   image: mariadb
