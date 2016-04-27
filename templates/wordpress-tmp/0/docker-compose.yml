@@ -18,7 +18,7 @@ wordpress-b:
     io.rancher.project.name: JUP
     io.rancher.container.hostname_override: container_name
 
-db_a:
+db-a:
   image: mariadb
   environment:
     MYSQL_ROOT_PASSWORD: example
@@ -26,7 +26,7 @@ db_a:
     io.rancher.project.name: JUPDB
     io.rancher.container.hostname_override: container_name
 
-db_b:
+db-b:
   image: mariadb
   environment:
     MYSQL_ROOT_PASSWORD: example
