@@ -7,7 +7,7 @@ fe:
   volumes-from: 
     - data
   labels:
-    io.rancher.sidekicks: data
+    io.rancher.sidekicks: fe
 
 fe-data:
   image: httpd:2.4
@@ -26,7 +26,7 @@ md:
   volumes-from: 
     - data
   labels:
-    io.rancher.sidekicks: data
+    io.rancher.sidekicks: md
 
 md-data:
   image: httpd:2.4
@@ -45,7 +45,7 @@ msg:
   volumes-from: 
     - data
   labels:
-    io.rancher.sidekicks: data
+    io.rancher.sidekicks: msg
 
 data:
   image: httpd:2.4
