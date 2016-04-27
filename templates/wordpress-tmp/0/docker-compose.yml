@@ -6,6 +6,8 @@ fe:
   restart: always
   volumes-from: 
     - fe-data
+  labels:
+    io.rancher.sidekicks: fe-data
 
 fe-data:
   image: httpd:2.4
@@ -23,6 +25,8 @@ md:
   restart: always
   volumes-from: 
     - md-data
+  labels:
+    io.rancher.sidekicks: md-data
 
 md-data:
   image: httpd:2.4
@@ -40,6 +44,8 @@ msg:
   restart: always
   volumes-from: 
     - msg-data
+  labels:
+    io.rancher.sidekicks: msg-data
 
 msg-data:
   image: httpd:2.4
