@@ -19,7 +19,7 @@ fe-data:
 md:
   image: httpd:2.4
   ports:
-    - 81:80
+    - 82:80
   hostname: md
   restart: always
   volumes-from: 
@@ -37,7 +37,7 @@ md-data:
 msg:
   image: httpd:2.4
   ports:
-    - 81:80
+    - 83:80
   hostname: msg
   restart: always
   volumes-from: 
