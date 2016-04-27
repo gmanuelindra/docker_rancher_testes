@@ -1,64 +1,35 @@
-FE:
+wordpress:
   image: wordpress
   links:
     - db:mysql
-  volumes_from:
-    - FE-DATA
   ports:
     - 80:80
-    
-FE-DATA:
-  net: none
-  labels:
-    io.rancher.container.hostname_override: container_name
-    io.rancher.container.start_once: true
-  volumes:
-    - /data/db
-  entrypoint: /bin/echo 
-  command: Data-only container
-  image: wordpress
-  
-MD:
+
+wordpressa:
   image: wordpress
   links:
-    - db:mysql
-  volumes_from:
-    - MD-DATA
+    - dba:mysql
   ports:
-    - 81:80
-    
-MG-DATA:
-  net: none
-  labels:
-    io.rancher.container.hostname_override: container_name
-    io.rancher.container.start_once: true
-  volumes:
-    - /data/db
-  entrypoint: /bin/echo 
-  command: Data-only container
-  image: wordpress
-  
-MSG:
+    - 80:80
+
+wordpressb:
   image: wordpress
   links:
-    - db:mysql
-  volumes_from:
-    - MSG-DATA
+    - dbb:mysql
   ports:
-    - 82:80
-    
-MSG-DATA:
-  net: none
-  labels:
-    io.rancher.container.hostname_override: container_name
-    io.rancher.container.start_once: true
-  volumes:
-    - /data/db
-  entrypoint: /bin/echo 
-  command: Data-only container
-  image: wordpress
-  
+    - 80:80
+
 db:
+  image: mariadb
+  environment:
+    MYSQL_ROOT_PASSWORD: example
+
+dba:
+  image: mariadb
+  environment:
+    MYSQL_ROOT_PASSWORD: example
+
+dbb:
   image: mariadb
   environment:
     MYSQL_ROOT_PASSWORD: example

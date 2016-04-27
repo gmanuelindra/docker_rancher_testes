@@ -12,9 +12,6 @@
       required: true
       default: "es"
 
-FE:
-MD:
-MSG:
-FE-DATA:
-MD-DATA:
-MSG-DATA:
+wordpress:
+wordpressa:
+wordpressb:
