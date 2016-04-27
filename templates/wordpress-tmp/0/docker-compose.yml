@@ -6,7 +6,7 @@ FE:
     - FE-DATA
   ports:
     - 80:80
-	
+    
 FE-DATA:
   net: none
   labels:
@@ -26,7 +26,7 @@ MD:
     - MD-DATA
   ports:
     - 81:80
-	
+    
 MG-DATA:
   net: none
   labels:
@@ -46,7 +46,7 @@ MSG:
     - MSG-DATA
   ports:
     - 82:80
-	
+    
 MSG-DATA:
   net: none
   labels:
