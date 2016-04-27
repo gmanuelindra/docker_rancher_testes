@@ -12,7 +12,6 @@ fe-data:
   volumes:
     - /usr/local/apache2/htdocs/
   labels:
-    io.rancher.container.hostname_override: 'fe'
     io.rancher.container.start_once: true
   entrypoint: /bin/true
 
@@ -30,7 +29,6 @@ md-data:
   volumes:
     - /usr/local/apache2/htdocs/
   labels:
-    io.rancher.container.hostname_override: 'md'
     io.rancher.container.start_once: true
   entrypoint: /bin/true
 
@@ -48,6 +46,5 @@ msg-data:
   volumes:
     - /usr/local/apache2/htdocs/
   labels:
-    io.rancher.container.hostname_override: 'msg'
     io.rancher.container.start_once: true
   entrypoint: /bin/true

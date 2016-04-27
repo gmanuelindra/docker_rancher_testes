@@ -5,13 +5,3 @@
   uuid: Wordpress-0
   minimum_rancher_version: v0.51.0
   questions:
-    - variable: cluster_name
-      description: "Unique name to assign to your Elasticsearch cluster."
-      label: "Cluster Name"
-      type: "string"
-      required: true
-      default: "es"
-
-fe:
-md:
-msg:
