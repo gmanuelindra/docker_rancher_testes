@@ -12,5 +12,6 @@
       required: true
       default: "es"
 
-wordpress-a:
-wordpress-b:
+fe:
+md:
+msg:
