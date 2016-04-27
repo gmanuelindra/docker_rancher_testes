@@ -12,6 +12,5 @@
       required: true
       default: "es"
 
-wordpress:
-wordpressa:
-wordpressb:
+wordpress_a:
+wordpress_b:
