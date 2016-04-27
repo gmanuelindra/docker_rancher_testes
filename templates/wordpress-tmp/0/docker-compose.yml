@@ -1,7 +1,5 @@
 fe:
   image: httpd:2.4
-  links:
-    - db-a:mysql
   ports:
     - 81:80
   hostname: fe
@@ -20,8 +18,6 @@ fe-data:
 
 md:
   image: httpd:2.4
-  links:
-    - db-a:mysql
   ports:
     - 81:80
   hostname: md
