@@ -36,8 +36,6 @@ md-data:
 
 msg:
   image: httpd:2.4
-  links:
-    - db-a:mysql
   ports:
     - 81:80
   hostname: msg
