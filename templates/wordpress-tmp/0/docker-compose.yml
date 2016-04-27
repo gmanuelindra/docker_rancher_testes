@@ -4,6 +4,9 @@ wordpress:
     - db:mysql
   ports:
     - 80:80
+  labels:
+    io.rancher.project.name: JUP
+    io.rancher.container.hostname_override: container_name
 
 wordpressa:
   image: wordpress
@@ -11,6 +14,9 @@ wordpressa:
     - dba:mysql
   ports:
     - 81:80
+  labels:
+    io.rancher.project.name: container_name
+    io.rancher.container.hostname_override: container_name
 
 wordpressb:
   image: wordpress
@@ -18,18 +24,33 @@ wordpressb:
     - dbb:mysql
   ports:
     - 82:80
+  labels:
+    io.rancher.project.name: JUP
+    io.rancher.container.hostname_override: container_name
 
 db:
   image: mariadb
   environment:
     MYSQL_ROOT_PASSWORD: example
+  labels:
+    io.rancher.project.name: JUPDB
+    io.rancher.container.hostname_override: container_name
 
 dba:
   image: mariadb
   environment:
     MYSQL_ROOT_PASSWORD: example
+  labels:
+    io.rancher.project.name: JUPDB
+    io.rancher.container.hostname_override: container_name
 
 dbb:
   image: mariadb
   environment:
     MYSQL_ROOT_PASSWORD: example
+  labels:
+    io.rancher.project.name: JUPDB
+    io.rancher.container.hostname_override: container_name
+	
+	
+	
