@@ -5,8 +5,10 @@ wordpress-a:
   ports:
     - 81:80
   labels:
-    io.rancher.project.name: container_name
+    io.rancher.project.name: JUP
     io.rancher.container.hostname_override: container_name
+    io.rancher.container.name:JUPA
+    hostname: JUPA
 
 wordpress-b:
   image: wordpress
@@ -17,6 +19,8 @@ wordpress-b:
   labels:
     io.rancher.project.name: JUP
     io.rancher.container.hostname_override: container_name
+    io.rancher.container.name: JUPB
+    hostname: JUPB
 
 db-a:
   image: mariadb
@@ -25,6 +29,7 @@ db-a:
   labels:
     io.rancher.project.name: JUPDB
     io.rancher.container.hostname_override: container_name
+    io.rancher.container.name: JUPDBA
 
 db-b:
   image: mariadb
@@ -33,3 +38,4 @@ db-b:
   labels:
     io.rancher.project.name: JUPDB
     io.rancher.container.hostname_override: container_name
+    io.rancher.container.name: JUPDBB
