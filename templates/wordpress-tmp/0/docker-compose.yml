@@ -7,7 +7,7 @@ wordpress-a:
   labels:
     io.rancher.project.name: JUP
     io.rancher.container.hostname_override: container_name
-    io.rancher.container.name:JUPA
+    io.rancher.container.name: JUPA
   hostname: JUPA
 
 wordpress-b:
