@@ -1,4 +1,4 @@
-wordpress:
+${cluster_name}:
   image: wordpress
   links:
     - db:mysql
