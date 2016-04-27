@@ -5,9 +5,9 @@ fe:
   hostname: fe
   restart: always
   volumes-from: 
-    - fe-data
+    - data
   labels:
-    io.rancher.sidekicks: fe-data
+    io.rancher.sidekicks: data
 
 fe-data:
   image: httpd:2.4
@@ -24,9 +24,9 @@ md:
   hostname: md
   restart: always
   volumes-from: 
-    - md-data
+    - data
   labels:
-    io.rancher.sidekicks: md-data
+    io.rancher.sidekicks: data
 
 md-data:
   image: httpd:2.4
@@ -43,11 +43,11 @@ msg:
   hostname: msg
   restart: always
   volumes-from: 
-    - msg-data
+    - data
   labels:
-    io.rancher.sidekicks: msg-data
+    io.rancher.sidekicks: data
 
-msg-data:
+data:
   image: httpd:2.4
   volumes:
     - /usr/local/apache2/htdocs/
