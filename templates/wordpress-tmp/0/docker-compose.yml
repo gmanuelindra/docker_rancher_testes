@@ -1,17 +1,17 @@
-wordpress_a:
+wordpress-a:
   image: wordpress
   links:
-    - db_a:mysql
+    - db-a:mysql
   ports:
     - 81:80
   labels:
     io.rancher.project.name: container_name
     io.rancher.container.hostname_override: container_name
 
-wordpress_b:
+wordpress-b:
   image: wordpress
   links:
-    - db_b:mysql
+    - db-b:mysql
   ports:
     - 82:80
   labels:
