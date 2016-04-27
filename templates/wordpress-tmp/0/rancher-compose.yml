@@ -12,4 +12,9 @@
       required: true
       default: "es"
 
-wordpress:
+FE:
+MD:
+MSG:
+FE-DATA:
+MD-DATA:
+MSG-DATA:
