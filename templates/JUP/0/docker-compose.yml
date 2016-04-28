@@ -16,7 +16,7 @@ FE-DATA:
   labels:
     io.rancher.container.start_once: true
   entrypoint: /bin/echo 
-  command: Data-only container for $${stack_name}${ENV}$${service_name}${NAME}0${scale}
+  command: Data-only container for ${stack_name}${ENV}${service_name}${NAME}0${scale}
 
 MD:
   image: httpd:2.4
