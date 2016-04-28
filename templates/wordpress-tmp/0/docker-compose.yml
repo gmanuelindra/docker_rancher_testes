@@ -1,56 +1,59 @@
-fe:
+FE:
   image: httpd:2.4
   ports:
     - 81:80
   hostname: fe
   restart: always
   volumes-from: 
-    - data
+    - FE-DATA
   labels:
-    io.rancher.sidekicks: fe
+    io.rancher.sidekicks: FE-DATA
 
-fe-data:
+FE-DATA:
   image: httpd:2.4
   volumes:
     - /usr/local/apache2/htdocs/
   labels:
     io.rancher.container.start_once: true
-  entrypoint: /bin/true
+  entrypoint: /bin/echo 
+  command: Data-only container for JUP${ENV}FE${NAME}
 
-md:
+MD:
   image: httpd:2.4
   ports:
     - 82:80
   hostname: md
   restart: always
   volumes-from: 
-    - data
+    - MD-DATA
   labels:
-    io.rancher.sidekicks: md
+    io.rancher.sidekicks: MD-DATA
 
-md-data:
+MD-DATA:
   image: httpd:2.4
   volumes:
     - /usr/local/apache2/htdocs/
   labels:
     io.rancher.container.start_once: true
-  entrypoint: /bin/true
+  entrypoint: /bin/echo 
+  command: Data-only container for JUP${ENV}MD${NAME}
 
-msg:
+MSG:
   image: httpd:2.4
   ports:
     - 83:80
   hostname: msg
   restart: always
   volumes-from: 
-    - data
+    - MSG-DATA
   labels:
-    io.rancher.sidekicks: msg
+    io.rancher.sidekicks: MSG-DATA
 
-data:
+MSG-DATA:
   image: httpd:2.4
   volumes:
     - /usr/local/apache2/htdocs/
   labels:
     io.rancher.container.start_once: true
-  entrypoint: /bin/true
+  entrypoint: /bin/echo 
+  command: Data-only container for JUP${ENV}MSG${NAME}

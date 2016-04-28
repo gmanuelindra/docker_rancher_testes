@@ -5,3 +5,21 @@
   uuid: Wordpress-0
   minimum_rancher_version: v0.51.0
   questions:
+    - variable: ENV
+      description: "Env."
+      label: "Env Name"
+      type: "enum"
+      required: true
+      options:
+        - "DEV"
+        - "QLD"
+        - "PRD"
+    - variable: NAME
+      description: "Name."
+      label: "Name"
+      type: "enum"
+      required: true
+      options:
+        - "SIE01"
+        - "FAO01"
+        - "PRM01"
