@@ -1,8 +1,8 @@
 .catalog:
-  name: "Wordpress"
-  version: "v0.1-educaas1"
+  name: "JUP"
+  version: "v0.1"
   description: "Blog tool, publishing platform and CMS"
-  uuid: Wordpress-0
+  uuid: JUP-0
   minimum_rancher_version: v0.51.0
   questions:
     - variable: ENV
