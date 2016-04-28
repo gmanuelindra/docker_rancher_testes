@@ -20,6 +20,18 @@
       type: "enum"
       required: true
       options:
-        - "SIE01"
-        - "FAO01"
-        - "PRM01"
+        - "SIE"
+        - "FAO"
+        - "PRM"
+
+FE:
+  scale: 1
+  retain_ip: true
+
+MD:
+  scale: 1
+  retain_ip: true
+
+MSG:
+  scale: 1
+  retain_ip: true
